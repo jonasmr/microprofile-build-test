@@ -1,0 +1,6 @@
+#!/bin/bash
+set -ev
+cp travis/Makefile.distorm.osx ../distorm/make/mac
+pushd distorm/make/mac
+make
+popd

@@ -27,3 +27,9 @@ matrix:
       env: TARGET=noui_d3d12_multithreading
 language: cpp
 script: ./travis/build
+
+before_install:
+  - if [ $TRAVIS_OS_NAME == osx ]; then
+      ./travis/before_install_osx
+    fi
+
