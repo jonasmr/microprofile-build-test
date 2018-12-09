@@ -5,7 +5,7 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	pushd distorm\\make\\win32\\
 	MSBuild.exe /property:Configuration="clib";Platform="x64"
 	popd	
-endif
+fi
 
 if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
 	pwd
@@ -13,11 +13,11 @@ if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
 	pushd distorm/make/mac
 	make
 	popd
-endif
+fi
 
 if [[ "$TRAVIS_OS_NAME" = "linux" ]]; then
 	pwd
 	pushd distorm/make/linux
 	make
 	popd
-endif
+fi
