@@ -4,6 +4,7 @@ if [[ "$TRAVIS_OS_NAME" = "windows" ]] ; then
 	export PATH="c:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\BuildTools\\MSBuild\\15.0\Bin\\":$PATH
 	pushd distorm\\make\\win32\\
 	MSBuild.exe /property:Configuration="clib";Platform="x64"
+	ls -l ../../
 	popd	
 fi
 
@@ -12,6 +13,7 @@ if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
 	cp travis/Makefile.distorm.osx ../distorm/make/mac
 	pushd distorm/make/mac
 	make
+	ls -l ../../
 	popd
 fi
 
@@ -19,5 +21,6 @@ if [[ "$TRAVIS_OS_NAME" = "linux" ]]; then
 	pwd
 	pushd distorm/make/linux
 	make
+	ls -l ../../
 	popd
 fi
