@@ -1,7 +1,0 @@
-#!/bin/bash
-echo "hello from before_install"
-pwd
-cp travis/Makefile.distorm.osx ../distorm/make/mac
-pushd distorm/make/mac
-make
-popd

@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "hello from before_install"
+if [[ "$TRAVIS_OS_NAME" = "osx" ]]; then
+	pwd
+	cp travis/Makefile.distorm.osx ../distorm/make/mac
+	pushd distorm/make/mac
+	make
+	popd
+endif
